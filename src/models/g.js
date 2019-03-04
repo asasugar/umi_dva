@@ -6,20 +6,30 @@ const delay = (timeout) => {
 };
 export default {
   namespace: 'app',
-  state: 0,
+  state: {
+    userInfo: {}
+  },
   reducers: {
-    add(state) {
-      return state + 1
+    USER_INFO(state, {
+      payload: val
+    }) {
+      const userInfo = val
+      return {
+        ...state,
+        userInfo
+      }
+
     },
   },
   effects: {
-    * addAfter1Second(action, {
-      call,
+    * saveUserInfo({
+      payload: val
+    }, {
       put
     }) {
-      yield call(delay, 1000);
       yield put({
-        type: 'add'
+        type: 'USER_INFO',
+        payload: val
       });
     },
   },
