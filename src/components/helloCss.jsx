@@ -1,6 +1,7 @@
 /* 子向父通过回调函数传值通信 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import events from '@/utils/events';
 
 export default class HelloCss extends React.Component {
   static propTypes = {
@@ -9,6 +10,9 @@ export default class HelloCss extends React.Component {
   };
 
   cb = msg => {
+    events.emit('login', '哈哈哈哈哈哈');
+    events.emit('login2', '哈哈哈哈哈哈');
+    events.remove('login');
     return this.props.callBack(msg);
   };
 
