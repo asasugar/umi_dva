@@ -6,8 +6,7 @@ import { connect } from 'dva';
 import Link from 'umi/link';
 import styles from './b.less';
 
-const { Header, Content, Footer, Sider } = Layout;
-const SubMenu = Menu.SubMenu;
+const { Header, Content, Footer } = Layout;
 const menu = (
   <Menu>
     <Menu.Item onClick={() => router.push('/login')}>SIGN OUT</Menu.Item>
