@@ -13,6 +13,7 @@
     "bizcharts": "^3.4.3",
     "dva": "^2.5.0-beta.2",
     "dva-logger": "^1.0.0",
+    "evenbus": "^1.0.3",
     "mockjs": "^1.0.1-beta3",
     "prop-types": "^15.7.2",
     "react": "^16.7.0",
