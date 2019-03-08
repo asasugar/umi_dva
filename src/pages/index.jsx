@@ -8,6 +8,7 @@ import HelloHtml from '@/components/helloHtml';
 import HelloJs from '@/components/helloJs';
 import HelloCss from '@/components/helloCss';
 import HelloReact from '@/components/helloReact';
+import HelloHooks from '@/components/helloHooks';
 
 class Areanull extends React.Component {
   // 父组件声明自己支持context
@@ -80,6 +81,7 @@ class Areanull extends React.Component {
         <HelloCss msg="Css" callBack={this.callBack.bind(this)} />
         <HelloReact msg="react" ref="myRef" />
         <HelloReact msg="react" ref={this.helloReactRef} />
+        <HelloHooks />
         <button onClick={this.handleClick1.bind(this, 'hello react1~')}>
           点击触发ref子组件写法一
         </button>
