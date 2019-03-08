@@ -10,9 +10,8 @@ export default class HelloCss extends React.Component {
   };
 
   cb = msg => {
-    events.emit('login', '哈哈哈哈哈哈');
+    events.emit('login', { a: 1, b: 2 });
     events.emit('login2', '哈哈哈哈哈哈');
-    events.remove('login');
     return this.props.callBack(msg);
   };
 
